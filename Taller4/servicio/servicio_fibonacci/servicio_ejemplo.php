@@ -20,7 +20,7 @@
 				$aux = $num1;
 				$num1 = $num2;
 				$num2 = $aux + $num1;
-				$cadena .= $num2." ";
+				$cadena .= $num2." -";
 				//echo $num2."<br/>";
 
 			}

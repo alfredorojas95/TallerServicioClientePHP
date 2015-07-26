@@ -8,7 +8,7 @@
 		*@return String en mayúscula
 		*/
 		function convertirAMayuscula($texto){
-			$texto = strtoupper($texto);
+			$texto = strtoupper($texto)."  ";
 			return $texto;
 		}
 

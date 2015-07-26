@@ -2,7 +2,7 @@
 // Esto nos sirve para incluir Zend de forma directa
 set_include_path(get_include_path() .
 PATH_SEPARATOR .
-realpath(dirname(__FILE__) . "/../Taller4/servicio/"));
+realpath(dirname(__FILE__) . "/../servicio/"));
 ?>
 
 <!DOCTYPE HTML>
@@ -24,7 +24,7 @@ if ( ($_GET['calcular'] == 'email') and ($_GET['cadena'] != "") ) {
 ?>
 
 <h1>Resultado Email</h1>
-<p>El correo es: <?php echo $cliente->validarCorreo($_GET['cadena']); ?></p><br />
+<p>El correo: <?php echo $_GET['cadena']." es ".$cliente->validarCorreo($_GET['cadena']); ?></p><br />
 
 <?php
 }
@@ -35,7 +35,7 @@ if ( ($_GET['calcular'] == 'email') and ($_GET['cadena'] != "") ) {
 <form action="cliente_email.php" method="get">
 <input type="hidden" name="calcular" value="email" /><!--para comprobar que se haya presionado el boton-->
 <p>Ingrese su dirección de correo electrónico:</p>
-<p><input type="text" name="cadena" /></p><!--text field-->
+<p><input type="text" name="cadena" required/></p><!--text field-->
 <p><input type="submit" value="Verificar" /></p><!--boton-->
 </form>
 <br />

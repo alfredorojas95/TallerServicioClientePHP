@@ -2,7 +2,7 @@
 // Esto nos sirve para incluir Zend de forma directa
 set_include_path(get_include_path() .
 PATH_SEPARATOR .
-realpath(dirname(__FILE__) . "/../Taller4/servicio/"));
+realpath(dirname(__FILE__) . "/../servicio/"));
 ?>
 
 <!DOCTYPE HTML>
@@ -35,7 +35,7 @@ if ( ($_GET['calcular'] == 'fibonacci') and ($_GET['numero'] != "") ) {
 <form action="cliente_fibonacci.php" method="get">
 <input type="hidden" name="calcular" value="fibonacci" /><!--para comprobar que se haya presionado el boton-->
 <p>Ingrese un límite hasta donde calcular la serie fibonacci:</p>
-<p><input type="text" name="numero" /></p><!--text field-->
+<p><input type="text" name="numero" required/></p><!--text field-->
 <p><input type="submit" value="Calcular" /></p><!--boton-->
 </form>
 <br />

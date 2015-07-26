@@ -9,9 +9,9 @@
 		*/
 		function validarCorreo($email){
 			if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-	    		return "Correcto";
+	    		return "CORRECTO";
 			}else {
-				return "Incorrecto";
+				return "INCORRECTO";
 			}
 			return "";
 		}
